@@ -1,31 +1,31 @@
 {
-  "name": "nstwf/reactphp-redlock",
-  "description": "ReactPHP redis redlock",
-  "version": "1.0.0",
-  "license": [
-    "MIT"
-  ],
-  "authors": [
-    {
-      "name": "Timur Sadullayev",
-      "email": "nstwf.pro@gmail.com"
+    "name": "nstwf/reactphp-redlock",
+    "description": "ReactPHP redis redlock",
+    "version": "1.0.0",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Timur Sadullayev",
+            "email": "nstwf.pro@gmail.com"
+        }
+    ],
+    "require": {
+        "clue/redis-react": "^3@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "react/async": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nstwf\\Redlock\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nstwf\\Redlock\\": "tests/src"
+        }
     }
-  ],
-  "require": {
-    "clue/redis-react": "^3@dev"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.5",
-    "react/async": "^4.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Nstwf\\Redlock\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Nstwf\\Redlock\\": "tests/src"
-    }
-  }
 }
