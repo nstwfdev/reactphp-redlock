@@ -10,6 +10,15 @@ use PHPUnit\Framework\TestCase;
 
 class LockTest extends TestCase
 {
+    public function testProperties()
+    {
+        $lock = new Lock('mykey', 60.01, 50);
+
+        $this->assertEquals('mykey', $lock->getKey());
+        $this->assertEquals(50, $lock->getId());
+        $this->assertEquals(60.01, $lock->getTtl());
+    }
+
     /**
      * @dataProvider uniqueGenerateDataProvider
      */
