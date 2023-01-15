@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nstwfdev/reactphp-redlock/compare/v1.0.0...v1.0.1) (2023-01-15)
+
+
+### Fix
+
+* add test for Lock test ([2ebb1c1](https://github.com/nstwfdev/reactphp-redlock/commit/2ebb1c11d5d3a7b6a6b867b10804a4d0cd78bad3))
+
 # 1.0.0 (2023-01-15)
 
 
