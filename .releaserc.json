@@ -16,7 +16,6 @@
           {"tag": "Docs", "release": false},
           {"tag": "Build", "release": false},
           {"tag": "Upgrade", "release": false},
-          {"tag": "Build", "release": false},
           {"tag": "Chore", "release": false}
         ]
       }
