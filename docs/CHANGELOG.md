@@ -1,3 +1,20 @@
+## [1.0.2](https://github.com/nstwfdev/reactphp-redlock/compare/v1.0.1...v1.0.2) (2025-07-11)
+
+
+### Chore
+
+* semantic release config ([972f503](https://github.com/nstwfdev/reactphp-redlock/commit/972f503cadde3d184bc79f5ca4a7ae82a974e1c5))
+
+### Fix
+
+* improve tests and codebase ([4ecb596](https://github.com/nstwfdev/reactphp-redlock/commit/4ecb596c700610b5848d1b9513fff03df1a0e2c1))
+
+### Upgrade
+
+* Bump actions/checkout from 3 to 4 ([ef3befc](https://github.com/nstwfdev/reactphp-redlock/commit/ef3befc9a79d7c319a8831f7fc9e720bfde15265))
+* Bump cycjimmy/semantic-release-action from 3 to 4 ([8fde950](https://github.com/nstwfdev/reactphp-redlock/commit/8fde950617f96dac698d82720657b67c6aaf4e76))
+* composer packages ([9b2b010](https://github.com/nstwfdev/reactphp-redlock/commit/9b2b010fbcdf5de101954cad2bbb7d4b5d74f82b))
+
 ## [1.0.1](https://github.com/nstwfdev/reactphp-redlock/compare/v1.0.0...v1.0.1) (2023-01-15)
 
 
