@@ -1,16 +1,15 @@
 <?php
 
-
 namespace Nstwf\Redlock;
 
-
 use Nstwf\Redlock\Lock\Lock;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 
 class LockTest extends TestCase
 {
-    public function testProperties()
+    public function testProperties(): void
     {
         $lock = new Lock('mykey', 60.01, 50);
 
@@ -19,10 +18,8 @@ class LockTest extends TestCase
         $this->assertEquals(60.01, $lock->getTtl());
     }
 
-    /**
-     * @dataProvider uniqueGenerateDataProvider
-     */
-    public function testLockGenerateUniqueId(int $count)
+    #[DataProvider('uniqueGenerateDataProvider')]
+    public function testLockGenerateUniqueId(int $count): void
     {
         $ids = [];
 
@@ -33,10 +30,10 @@ class LockTest extends TestCase
         $this->assertCount($count, array_unique($ids));
     }
 
-    private function uniqueGenerateDataProvider(): array
+    public static function uniqueGenerateDataProvider(): array
     {
         return [
-            10  => [10],
+            10 => [10],
             100 => [100],
         ];
     }

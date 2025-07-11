@@ -1,16 +1,10 @@
 <?php
-
-
 declare(strict_types=1);
-
 
 namespace Nstwf\Redlock\Lock;
 
-
 final class Lock
 {
-    public const KEY_PREFIX = ':lock';
-
     public function __construct(
         private string $key,
         private float $ttl,

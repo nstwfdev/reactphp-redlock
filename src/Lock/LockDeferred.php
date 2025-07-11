@@ -1,14 +1,9 @@
 <?php
-
-
 declare(strict_types=1);
-
 
 namespace Nstwf\Redlock\Lock;
 
-
 use React\Promise\Deferred;
-
 
 final class LockDeferred
 {

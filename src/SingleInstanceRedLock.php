@@ -1,11 +1,7 @@
 <?php
-
-
 declare(strict_types=1);
 
-
 namespace Nstwf\Redlock;
-
 
 use Clue\React\Redis\RedisClient;
 use Nstwf\Redlock\Exceptions\FailedToAcquireException;
@@ -19,7 +15,6 @@ use React\Promise\PromiseInterface;
 
 use function React\Promise\reject;
 use function React\Promise\resolve;
-
 
 final class SingleInstanceRedLock implements RedLockInterface
 {
@@ -51,11 +46,11 @@ final class SingleInstanceRedLock implements RedLockInterface
                 }
 
                 if (!$this->waitForAcquire) {
-                    return resolve();
+                    return resolve(null);
                 }
 
                 if (!array_key_exists($lock->getKey(), $this->queue) || count($this->queue[$lock->getKey()]) === 0) {
-                    return resolve();
+                    return resolve(null);
                 }
 
                 /** @var LockDeferred $queued */
@@ -65,7 +60,7 @@ final class SingleInstanceRedLock implements RedLockInterface
                 return $this
                     ->tryAcquire($queued->getKey(), $queued->getTtl(), $queued->getId(), true)
                     ->then(fn(Lock $lock) => $deferred->resolve($lock))
-                    ->otherwise(fn() => resolve());
+                    ->catch(fn() => resolve(null));
             });
     }
 
